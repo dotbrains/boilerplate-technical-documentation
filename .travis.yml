@@ -1,0 +1,32 @@
+dist: focal
+group: beta
+language: python
+python:
+  - '3.9'
+
+notifications:
+  email: false
+
+cache:
+  pip: true
+  directories:
+      - ~/.cache/pypoetry
+
+before_install:
+  - python3 -m pip install pipx
+  - python3 -m pipx install poetry==1.2.0
+
+install:
+  - poetry install
+
+script: mkdocs build --verbose --clean
+
+deploy:
+  provider: pages
+  github-token: $GHE_TOKEN
+  skip-cleanup: true
+  github-url: github.ibm.com
+  local_dir: site
+  target_branch: gh-pages
+  on:
+    branch: main

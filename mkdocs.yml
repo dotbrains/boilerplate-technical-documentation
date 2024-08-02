@@ -1,0 +1,64 @@
+site_name: Boilerplate Technical Documentation
+site_description: Technical documentation.
+site_author: Nicholas Adamou <nicholas.adamou@outlook.com>
+site_url: https://pages.github.com/dotbrains/documentation/
+
+repo_url: https://github.ibm.com/dotbrains/documentation
+repo_name: dotbrains/documentation
+
+copyright: Copyright &copy; 2024 DotBrains
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dotbrains
+
+nav:
+  - Overview: "index.md"
+
+theme:
+  name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - toc.follow
+    - toc.integrate
+    - toc.
+  favicon: images/favicon.png
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - toc:
+      permalink: "#"
+
+plugins:
+  - include-markdown:
+      trailing_newlines: false
+      comments: false
+  - search
+  - git-revision-date-localized:
+      type: datetime
+      locale: en
