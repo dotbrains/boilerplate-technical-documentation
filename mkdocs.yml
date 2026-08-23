@@ -1,17 +1,17 @@
 site_name: Boilerplate Technical Documentation
 site_description: Technical documentation.
 site_author: Nicholas Adamou <nicholas.adamou@outlook.com>
-site_url: https://pages.github.com/dotbrains/documentation/
+site_url: https://pages.github.com/smeltery/documentation/
 
-repo_url: https://github.ibm.com/dotbrains/documentation
-repo_name: dotbrains/documentation
+repo_url: https://github.ibm.com/smeltery/documentation
+repo_name: smeltery/documentation
 
-copyright: Copyright &copy; 2024 DotBrains
+copyright: Copyright &copy; 2024 Smeltery
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/dotbrains
+      link: https://github.com/smeltery
 
 nav:
   - Overview: "index.md"
